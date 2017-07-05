@@ -1,0 +1,46 @@
+{
+    "tags": {
+        "allowUnknownTags": true,
+        "dictionaries": ["jsdoc","closure"]
+    },
+    "source": {
+        "include": [
+            "constant.js",
+            "libGeneral.js",
+            "libParam.js",
+            "libDate.js",
+            "libModule.js",
+            "libGrid.js",
+            "libDataTable.js",
+            "libNotification.js",
+            "EnhanceDataGrid.js"
+        ],
+        "exclude": [
+            "sample",
+            "out",
+            "backup.js",
+            "constant.js",
+            "libDate.js",
+            "libModule.js",
+            "libGrid.js",
+            "libDataTable.js",
+            "libNotification.js",
+            "EnhanceDataGrid.js"
+        ],
+        // "includePattern": ".+\\.js(doc|x)?$",
+        "includePattern": ".+\\.js(doc)?$",
+        // "excludePattern": "(^|\\/|\\\\)_",
+        "excludePattern": "(^|\\/|\\\\)_"
+    },
+    "plugins": [],
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false
+    },
+    "opts": {
+        "destination": "./documentation/"
+    },
+    "tutorial_libNotification": {
+        "title": "Tutorial - libNotification.js"
+    }
+}
