@@ -110,7 +110,7 @@ window.libParam = (function() {
          * @instance
          */
         getAllCookies: function() {
-            return libParam_transformCookiesToAssocArray(document.cookie);
+            return libParam._transformCookiesToAssocArray(document.cookie);
         },
 
         /**
