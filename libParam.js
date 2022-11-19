@@ -40,7 +40,7 @@ window.libParam = (function() {
             var prmarr = prmstr.split('&');
             for (var i = 0; i < prmarr.length; i++) {
                 var tmparr = prmarr[i].split('=');
-                params[tmparr[0]] = tmparr[1];
+                params[tmparr[0]] = window.decodeURIComponent(tmparr[1]);
             }
             return params;
         },
@@ -120,7 +120,7 @@ window.libParam = (function() {
          * @param {String} name - cookie name
          */
         checkCookie: function(name) {
-            var tempCookie = libParamgetCookie(name);
+            var tempCookie = libParam.getCookie(name);
             if (tempCookie !== '') { return true; }
             return false;
         },
@@ -133,7 +133,7 @@ window.libParam = (function() {
          * @param {String} path - cookie URL path
          */
         delCookie: function(name, path) {
-            var tempCookie = libParamgetCookie(name);
+            var tempCookie = libParam.getCookie(name);
             if (tempCookie !== '') {
                 if (!path) {
                     // document.cookie = name+'=; path=/; expires='+new Date(0).toUTCString();
